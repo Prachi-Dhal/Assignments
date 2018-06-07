@@ -1,0 +1,23 @@
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 93px;
+    color: #222;
+    padding-left:14px;
+    background-color: white;
+    margin: 34px;
+}
+
+
+form {
+    margin: 0 auto;
+    width: 60%;
+    padding: 1em;
+    border: 1px solid;
+    border-radius: 1em;
+    background-color: orange;
+  }
+
+   

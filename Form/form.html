@@ -1,0 +1,184 @@
+<!doctype>
+<html>
+
+<head>
+    <title>Form design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+    <!--<h2> Forms</h2>-->
+
+    <form class="original-form" method="POST" action="" onsubmit="validate()" >
+        <h2> Forms</h2>
+        <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+              <input class="input is-primary" id="first_name" type="text" required=""  name="first_name" placeholder="Enter your first name">
+              
+            </div>
+          </div>
+          <div class="field">
+                <label class="label">Last Name</label>
+                <div class="control">
+                  <input class="input is-primary" id="last_name"  type="text" required="" name="last_name" placeholder="Enter your last name">
+                </div>
+              </div>
+          
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-primary" id="email" type="email" name="email" size="32" minlength="3" maxlength="64" required="" placeholder="Email input" value="">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <!-- <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span> -->
+            </div>
+            <!-- <p class="help is-danger">This email is invalid</p> -->
+          </div>
+
+          <div class="field">
+              <label class="label">Password</label>
+              
+                <input class="input is-primary" id="password" type="password" minlength="6" maxlength="15" required placeholder="input password">
+                
+              </div>
+              
+            </div>
+            
+          
+          <!-- <div class="field">
+            <label class="label">Hobbies</label>
+            <div class="control">
+              <div class="select">
+                <select name="hobbies" id="dropdown" required>
+                   <option value="">Select_dropdown</option>
+                  <option value="1">With options</option> 
+                  
+                </select>
+              </div>
+            </div>
+          </div> -->
+          <div class="field">
+            <label class="label">Hobbies</label>
+        <div class="control">
+          <label class="radio">
+            <input type="checkbox" name="hobbies"  id="hobby_cricket" value="cricket">
+           cricket
+        </label>
+          <label class="radio">
+              <input type="checkbox" name="hobbies"  id="hobby_football" value="football">
+              football
+          </label>
+          <label class="radio">
+              <input type="checkbox" name="hobbies"  id="hobby_reading" value="reading">
+              reading
+          </label>
+          <!-- <td>Languages Known </td>
+                    <td> </td>
+                    <td>
+                        <input type="checkbox" id="lang1" value="English">English
+                        <input type="checkbox" id="lang2" value="Hindi">Hindi
+                        <input type="checkbox" id="lang3" value="Telugu">Telugu
+                        <input type="checkbox" id="lang4" value="Other">Other
+                    </td> -->
+        </div>
+      </div>
+          
+          <div class="field">
+                <label class="label">Gender</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="gender"  id="gender_male" value="male" required="">
+               Male
+            </label>
+              <label class="radio">
+                <input type="radio" name="gender"  id="gender_female" value="female" required="">
+                Female
+              </label>
+            </div>
+          </div>
+          
+          <div class="field is-grouped">
+            <div class="control">
+                    <input type="submit" value="submit" class="button is-link"/>
+              <!-- <button class="button is-link">Submit</button> -->
+            </div>
+            <div class="control">
+              <button class="button is-text">Cancel</button>
+            </div>
+          </div>
+    </form>
+</body>
+
+</html>
+
+<script>
+   var first_name = document.getElementById('first_name');
+    var last_name = document.getElementById('last_name');
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+  var hobbies=[];
+          //  var bool1 = document.getElementById("lang1").checked;
+          //   var bool2 = document.getElementById("lang2").checked;
+          //   var bool3 = document.getElementById("lang3").checked;
+          //   var bool4 = document.getElementById("lang4").checked;
+    // var hobbies = document.getElementById('dropdown');
+    if( document.getElementById('hobby_cricket').checked){
+     var hobbies = document.getElementById('hobby_cricket');
+    }
+    if( document.getElementById('hobby_football').checked){
+    var hobbies = document.getElementById('hobby_football');
+    }
+    if( document.getElementById('hobby_reading').checked){
+    var hobbies = document.getElementById('hobby_reading');
+    }
+    if( document.getElementById('gender_male').checked){
+    var gender = document.getElementById('gender_male');
+    }
+    else{
+      var gender = document.getElementById('gender_female');
+    }
+    document.querySelector('form.original-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    console.log('first_name:',first_name.value);  
+    console.log('last_name:',last_name.value); 
+    console.log('email:',email.value);  
+    console.log('password:',password.value);
+    console.log('hobbies:',hobbies.toString());
+    // console.log('hobbies:',hobbies.value);
+    console.log('gender:',gender.value);
+    
+    // language: {
+    //                 language1: bool1 ? document.getElementById("lang1").value : "",
+    //                 language2: bool2 ? document.getElementById("lang2").value : "",
+    //                 language3: bool3 ? document.getElementById("lang3").value : "",
+    //                 language4: bool4 ? document.getElementById("lang4").value : "",
+    //             },
+    //hobbies.toString();
+    // console.log('hobbies:',hobbies.toString());
+    // console.log('language:',language.toString());
+    })
+    // function validate() {
+    //    var first_name = document.getElementById("first_name").value;
+    //    alert(first_name);
+    //    console.log(first_name);
+       
+    // }
+    function validate() {
+      alert("thank you!");
+    }
+    //  var obj={first_name: document.getElementById('first_name').value, last_name: document.getElementById('last_name').value, email: document.getElementById('email').value,language: document.getElementById('language').value}
+    //    for( var i in obj)
+    //    {
+    //      console.log(i , obj[i]);
+    //    }
+    //    document.write("first_name is:" + first_name.value + "<br>" + "last_name is:" + last_name.value + "<br>" +"email is:" + email.value + "<br>" +"password is:" + password.value + "<br>" +"hobbies is:" + hobbies + "<br>" +"gender is:" + gender + "<br>");
+    // }
+  
+</script>
